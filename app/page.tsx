@@ -1,64 +1,99 @@
+"use client";
+
+import SectionWrapper from "@/components/SectionWrapper";
+import Link from "next/link";
 import Image from "next/image";
+import content from "@/data/content.json";
+import { useState } from "react";
 
 export default function Home() {
+  const { cards } = content.home;
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredCards = cards.filter(
+    (card) =>
+      card.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      card.description.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="flex min-h-screen flex-col bg-[#f1f3f6]">
+      <main className="flex-1 py-4">
+        <SectionWrapper>
+          <div className="bg-white p-4 shadow-sm mb-4 rounded-lg">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search for products, brands and more"
+                className="w-full bg-[#f0f5ff] text-slate-700 placeholder-slate-400 border border-transparent focus:border-blue-500 rounded-md py-2.5 pl-10 pr-4 text-sm focus:outline-none transition-colors"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <svg
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          {filteredCards.length > 0 ? (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {filteredCards.map((card) => (
+                <Link
+                  key={card.id}
+                  href={card.link}
+                  className="group relative flex flex-col bg-white overflow-hidden rounded-xl hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
+                >
+                  <div className="relative aspect-4/3 w-full p-4 flex items-center justify-center">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        fill
+                        className="object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="p-4 flex flex-col flex-1 text-center">
+                    <h2 className="text-sm md:text-base font-medium text-slate-900 mb-1 group-hover:text-blue-600">
+                      {card.title}
+                    </h2>
+                    <p className="text-xs text-slate-500 line-clamp-2">
+                      {card.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-20 bg-white rounded-xl shadow-sm">
+              <div className="max-w-xs mx-auto">
+                <p className="text-lg font-medium text-slate-700 mb-2">
+                  No results found
+                </p>
+                <p className="text-sm text-slate-500 mb-4">
+                  We couldn't find any industries matching "{searchQuery}"
+                </p>
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="text-blue-600 font-medium text-sm hover:underline"
+                >
+                  Clear Search
+                </button>
+              </div>
+            </div>
+          )}
+        </SectionWrapper>
       </main>
     </div>
   );

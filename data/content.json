@@ -1,0 +1,181 @@
+{
+  "home": {
+    "title": "Multi-Industry Product UI",
+    "subtitle": "Explore professional, realistic product page designs across 7 different industries.",
+    "cards": [
+      {
+        "id": "clothing",
+        "title": "Clothing & Fashion",
+        "description": "Premium apparel e-commerce with size/color selection.",
+        "image": "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg",
+        "link": "/clothing"
+      },
+      {
+        "id": "food",
+        "title": "Food & Beverage",
+        "description": "Appetizing restaurant menu item with dietary info.",
+        "image": "https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg",
+        "link": "/food"
+      },
+      {
+        "id": "education",
+        "title": "Educational Institution",
+        "description": "University overview with campus stats and facilities.",
+        "image": "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg",
+        "link": "/education"
+      },
+      {
+        "id": "courses",
+        "title": "Online Courses",
+        "description": "Video course sales page with curriculum.",
+        "image": "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+        "link": "/courses"
+      },
+      {
+        "id": "online-classes",
+        "title": "Live Online Classes",
+        "description": "Webinar registration with date/time scheduling.",
+        "image": "https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg",
+        "link": "/online-classes"
+      },
+      {
+        "id": "digital",
+        "title": "Digital Products",
+        "description": "Software/SaaS download page with licensing.",
+        "image": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg",
+        "link": "/digital"
+      },
+      {
+        "id": "nft",
+        "title": "NFT Marketplace",
+        "description": "Digital art auction with blockchain details.",
+        "image": "https://images.pexels.com/photos/270557/pexels-photo-270557.jpeg",
+        "link": "/nft"
+      }
+    ]
+  },
+  "clothing": {
+    "title": "Classic Denim Jacket",
+    "price": "$79.99",
+    "images": [
+      "https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg",
+      "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg",
+      "https://images.pexels.com/photos/1336873/pexels-photo-1336873.jpeg"
+    ],
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": [
+      { "name": "Dark Wash", "hex": "#1f2937" },
+      { "name": "Light Wash", "hex": "#60a5fa" },
+      { "name": "Black", "hex": "#000000" }
+    ],
+    "description": "This premium cotton denim jacket offers a modern, tailored fit perfect for any season. Features reinforced stitching, antique brass buttons, and four functional pockets. The fabric is durable yet soft, providing comfort without sacrificing style.",
+    "care": "Machine wash cold with like colors. Tumble dry low. Do not bleach."
+  },
+  "food": {
+    "name": "Signature Truffle Burger",
+    "description": "A juicy, flame-grilled beef patty topped with melted Swiss cheese, caramelized onions, wild mushrooms, and our house-made truffle aioli on a toasted brioche bun.",
+    "price": "$18.50",
+    "image": "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg",
+    "badges": ["Chef's Choice", "Spicy Option", "Gluten-Free Bun Available"],
+    "rating": 4.8,
+    "reviewCount": 124,
+    "reviews": [
+      { "user": "Sarah J.", "comment": "Best burger I've ever had. Properties of the truffle oil are perfect." },
+      { "user": "Mike T.", "comment": "Juicy and flavorful. The bun held up well." }
+    ]
+  },
+  "education": {
+    "name": "Oakwood University",
+    "established": "1895",
+    "students": "15,000+",
+    "location": "Cambridge, MA",
+    "accreditation": "NECHE Accredited",
+    "banner": "https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg",
+    "facilities": [
+      "24/7 Digital Library",
+      "Advanced Robotics Lab",
+      "Olympic-Size Swimming Pool",
+      "Student Innovation Hub",
+      "Botanical Gardens"
+    ],
+    "description": "Oakwood University is a premier institution dedicated to academic excellence and global leadership. We provide a transformative educational experience that empowers students to shape the future."
+  },
+  "courses": {
+    "title": "Master Full-Stack Web Development",
+    "instructor": {
+      "name": "Alex Johnson",
+      "title": "Senior Software Engineer",
+      "image": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
+    },
+    "thumbnail": "https://images.pexels.com/photos/5483077/pexels-photo-5483077.jpeg",
+    "badges": ["32 hours on-demand video", "Certificate upon completion", "Lifetime Access"],
+    "price": "$99.00",
+    "originalPrice": "$499.00",
+    "curriculum": [
+      "Introduction to Web Architecture",
+      "HTML5 & CSS3 Mastery",
+      "JavaScript: ES6+ and Beyond",
+      "React.js & State Management",
+      "Node.js & Express Architecture",
+      "Database Design with PostgreSQL",
+      "Deployment & DevOps Basics"
+    ]
+  },
+  "onlineClasses": {
+    "title": "Creative Writing Masterclass: Storytelling 101",
+    "instructor": {
+      "name": "Prof. Elena Rodriguez",
+      "title": "Award-Winning Novelist",
+      "image": "https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg",
+      "bio": "Prof. Rodriguez is a celebrated author with over 15 years of experience in creative writing and storytelling."
+    },
+    "date": "May 15, 2026",
+    "time": "7:00 PM EST",
+    "duration": "2 Hours",
+    "image": "https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg",
+    "description": "Unlock your creative potential in this interactive live workshop. Learn the fundamentals of narrative structure, character development, and dialogue from an award-winning author.",
+    "spotsLeft": 15
+  },
+  "digital": {
+    "name": "FocusFlow Productivity Suite",
+    "author": "by FocusFlow Systems",
+    "rating": 4.7,
+    "reviewCount": 842,
+    "badge": "Digital Download",
+    "tagline": "The ultimate tool for managing creative projects. Streamline your workflow with our award-winning software.",
+    "image": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg",
+    "features": [
+      "Kanban & List Views",
+      "Time Tracking Integration",
+      "Real-time Collaboration",
+      "Automated Reports",
+      "Cloud Sync across Devices"
+    ],
+    "specs": [
+      "macOS 12+ / Windows 10+",
+      "4GB RAM Minimum",
+      "500MB Disk Space"
+    ],
+    "licenses": [
+      { "type": "Personal", "price": "$49", "perks": ["1 User", "Lifetime Updates"] },
+      { "type": "Team", "price": "$199", "perks": ["5 Users", "Priority Support", "Admin Dashboard"] }
+    ]
+  },
+  "nft": {
+    "name": "Cyber Void #8821",
+    "creator": "CryptoArtist_X",
+    "verified": true,
+    "image": "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
+    "price": "4.25 ETH",
+    "dollarValue": "$12,450.00",
+    "blockchain": "Ethereum",
+    "tokenId": "8821",
+    "contractAddress": "0x123...abc",
+    "history": [
+      { "event": "Minted", "price": "0.05 ETH", "date": "2023-01-10" },
+      { "event": "Sale", "price": "1.5 ETH", "date": "2024-05-22" },
+      { "event": "Sale", "price": "3.8 ETH", "date": "2025-11-05" }
+    ],
+    "endsIn": "12h 45m 20s"
+  }
+}
