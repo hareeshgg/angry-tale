@@ -98,10 +98,69 @@
       "Student Innovation Hub",
       "Botanical Gardens"
     ],
-    "description": "Oakwood University is a premier institution dedicated to academic excellence and global leadership. We provide a transformative educational experience that empowers students to shape the future."
+    "description": "Oakwood University is a premier institution dedicated to academic excellence and global leadership. We provide a transformative educational experience that empowers students to shape the future.",
+    "subjects": [
+      {
+        "id": "cs",
+        "title": "Computer Science",
+        "description": "Explore the fundamentals of computation, algorithms, and system design. Specializations available in AI, Cybersecurity, and Software Engineering.",
+        "image": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
+        "duration": "4 Years"
+      },
+      {
+        "id": "business",
+        "title": "Business Administration",
+        "description": "Develop leadership skills and business acumen. Covers management, marketing, finance, and entrepreneurship.",
+        "image": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+        "duration": "3 Years"
+      },
+      {
+        "id": "psychology",
+        "title": "Psychology",
+        "description": "Understand the human mind and behavior. Includes courses in cognitive, developmental, and social psychology.",
+        "image": "https://images.pexels.com/photos/5717632/pexels-photo-5717632.jpeg",
+        "duration": "3 Years"
+      },
+      {
+        "id": "engineering",
+        "title": "Mechanical Engineering",
+        "description": "Design and build mechanical systems. Focuses on thermodynamics, fluid mechanics, and material science.",
+        "image": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg",
+        "duration": "4 Years"
+      },
+      {
+        "id": "law",
+        "title": "Law",
+        "description": "Study legal systems and justice. Prepares students for a career in legal practice, judiciary, or public service.",
+        "image": "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg",
+        "duration": "3 Years"
+      },
+      {
+        "id": "medicine",
+        "title": "Medicine",
+        "description": "Comprehensive medical training combining theoretical knowledge with clinical practice. Prepare for a career in healthcare.",
+        "image": "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg",
+        "duration": "5 Years"
+      }
+    ],
+    "psychologyDegree": {
+      "title": "Bachelor of Science in Psychology",
+      "price": "$15,000 / year",
+      "images": [
+        "https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg",
+        "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg",
+        "https://images.pexels.com/photos/1326947/pexels-photo-1326947.jpeg",
+        "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg"
+      ],
+      "specializations": ["Clinical Psychology", "Counseling", "Organizational Behavior"],
+      "durations": ["3 Years (Standard)", "4 Years (with Placement)"],
+      "description": "Our B.Sc. in Psychology offers a comprehensive understanding of human behavior and mental processes. You will explore cognitive, developmental, and social psychology through a blend of theoretical learning and practical application.",
+      "accreditation": "APA Accredited",
+      "nextIntake": "September 2026"
+    }
   },
   "courses": {
-    "title": "Master Full-Stack Web Development",
+    "title": "Full-Stack Web Development",
     "instructor": {
       "name": "Alex Johnson",
       "title": "Senior Software Engineer",
@@ -134,7 +193,9 @@
     "duration": "2 Hours",
     "image": "https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg",
     "description": "Unlock your creative potential in this interactive live workshop. Learn the fundamentals of narrative structure, character development, and dialogue from an award-winning author.",
-    "spotsLeft": 15
+    "spotsLeft": 15,
+    "price": "$49.00",
+    "originalPrice": "$199.00"
   },
   "digital": {
     "name": "FocusFlow Productivity Suite",
